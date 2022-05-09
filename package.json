@@ -1,0 +1,63 @@
+{
+  "name": "assignRectangular2D",
+  "version": "0.0.0",
+  "description": "",
+  "main": "./lib/index.js",
+  "module": "./lib-esm/index.js",
+  "types": "./lib/index.d.ts",
+  "keywords": [],
+  "author": "J Alejandro Bolanos A &lt;jobo322&gt;",
+  "license": "MIT",
+  "files": [
+    "src",
+    "lib",
+    "lib-esm"
+  ],
+  "scripts": {
+    "clean": "rimraf lib lib-esm",
+    "eslint": "eslint src --ext ts --cache",
+    "eslint-fix": "npm run eslint -- --fix",
+    "prepublishOnly": "npm run tsc",
+    "test": "npm run test-coverage && npm run eslint",
+    "test-coverage": "npm run test-only -- --coverage",
+    "test-only": "jest",
+    "tsc": "npm run clean && npm run tsc-cjs && npm run tsc-esm",
+    "tsc-cjs": "tsc --project tsconfig.cjs.json",
+    "tsc-esm": "tsc --project tsconfig.esm.json"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jobo322/assignRectangular2D.git"
+  },
+  "bugs": {
+    "url": "https://github.com/jobo322/assignRectangular2D/issues"
+  },
+  "homepage": "https://github.com/jobo322/assignRectangular2D#readme",
+  "jest": {
+    "preset": "ts-jest",
+    "testEnvironment": "node"
+  },
+  "prettier": {
+    "arrowParens": "always",
+    "semi": true,
+    "singleQuote": true,
+    "tabWidth": 2,
+    "trailingComma": "all"
+  },
+  "dependencies": {
+    "cheminfo-types": "^1.1.0",
+    "install": "^0.13.0",
+    "ml-array-sequential-fill": "^1.1.8",
+    "ml-matrix": "^6.10.0"
+  },
+  "devDependencies": {
+    "@types/jest": "^27.5.0",
+    "eslint": "^8.15.0",
+    "eslint-config-cheminfo-typescript": "^10.4.0",
+    "jest": "^28.1.0",
+    "prettier": "^2.6.2",
+    "rimraf": "^3.0.2",
+    "ts-jest": "^28.0.1",
+    "typescript": "^4.6.4"
+  }
+}
