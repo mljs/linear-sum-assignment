@@ -34,7 +34,7 @@ export function getShortestPath(options: GetShortestPathOptions) {
   let sink = -1;
   let delta = 0;
   let curColumn = currUnAssCol;
-  let shortestPathCost = getArrayOfInfinity(nbRows)//new Float64Array(nbRows).fill(Number.POSITIVE_INFINITY);
+  let shortestPathCost = getArrayOfInfinity(nbRows);
 
   while (sink === -1) {
     scannedColumns[curColumn] = 1;
@@ -42,7 +42,7 @@ export function getShortestPath(options: GetShortestPathOptions) {
     let closestRowScan = -1;
     for (let curRowScan = 0; curRowScan < numRows2Scan; curRowScan++) {
       let curRow = rows2Scan[curRowScan];
-      // console.log(`curRow ${curRow}, ${curRowScan}`)
+
       let reducedCost = delta + matrix.get(curRow, curColumn) - dualVariableForColumns[curColumn] - dualVariableForRows[curRow];
       if (reducedCost < shortestPathCost[curRow]) {
         pred[curRow] = curColumn;
