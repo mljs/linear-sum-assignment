@@ -3,10 +3,12 @@ import { Matrix } from 'ml-matrix';
 
 import { getShortestPath } from './getShortestPath';
 
-export function assign2D(input: DoubleArray[], maximaze = true) {
-  if (input[0].length > input.length) {
-    throw new Error('the matrix should have at least less rows than columns');
-  }
+interface Options {
+  maximaze?: boolean
+}
+
+export default function linearSumAssignment(input: DoubleArray[], options: Options = {}) {
+  const { maximaze = true } = options;
 
   let matrix = Matrix.checkMatrix(input);
 
@@ -21,6 +23,8 @@ export function assign2D(input: DoubleArray[], maximaze = true) {
 
   let matrixDelta = maximaze ? matrix.max() : matrix.min();
   matrix = matrix.subtract(matrixDelta);
+  if (maximaze) matrix = matrix.mul(-1);
+
 
   let rowAssignments: DoubleArray = new Float64Array(nbRows).fill(-1);
   let columnAssignments: DoubleArray = new Float64Array(nbColumns).fill(-1);

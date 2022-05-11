@@ -1,0 +1,47 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="700" height="475">
+<!-- links -->
+<line x1="50" y1="50" x2="350" y2="50" stroke="#762a83" stroke-width="3"/>
+<line x1="50" y1="50" x2="350" y2="175" stroke="#762a83" stroke-width="3"/>
+<line x1="50" y1="50" x2="350" y2="300" stroke="#762a83" stroke-width="3"/>
+<line x1="50" y1="50" x2="350" y2="425" stroke="#DB4437" stroke-width="3" stroke-dasharray="5,5" d="M5 20 l215 0"/>
+<line x1="50" y1="175" x2="350" y2="50" stroke="#762a83" stroke-width="3"/>
+<line x1="50" y1="175" x2="350" y2="175" stroke="#762a83" stroke-width="3"/>
+<line x1="50" y1="175" x2="350" y2="300" stroke="#DB4437" stroke-width="3" stroke-dasharray="5,5" d="M5 20 l215 0"/>
+<line x1="50" y1="175" x2="350" y2="425" stroke="#762a83" stroke-width="3"/>
+<line x1="50" y1="300" x2="350" y2="50" stroke="#762a83" stroke-width="3"/>
+<line x1="50" y1="300" x2="350" y2="175" stroke="#DB4437" stroke-width="3" stroke-dasharray="5,5" d="M5 20 l215 0"/>
+<line x1="50" y1="300" x2="350" y2="300" stroke="#762a83" stroke-width="3"/>
+<line x1="50" y1="300" x2="350" y2="425" stroke="#762a83" stroke-width="3"/>
+<line x1="50" y1="425" x2="350" y2="50" stroke="#DB4437" stroke-width="3" stroke-dasharray="5,5" d="M5 20 l215 0"/>
+<line x1="50" y1="425" x2="350" y2="175" stroke="#762a83" stroke-width="3"/>
+<line x1="50" y1="425" x2="350" y2="300" stroke="#762a83" stroke-width="3"/>
+<line x1="50" y1="425" x2="350" y2="425" stroke="#762a83" stroke-width="3"/>
+
+<!-- nodes -->
+<g><ellipse fill="#e7d4e8" cx="50" cy="50" rx="8" ry="8" stroke="#762a83"/></g>
+<g><ellipse fill="#e7d4e8" cx="50" cy="175" rx="8" ry="8" stroke="#762a83"/></g>
+<g><ellipse fill="#e7d4e8" cx="50" cy="300" rx="8" ry="8" stroke="#762a83"/></g>
+<g><ellipse fill="#e7d4e8" cx="50" cy="425" rx="8" ry="8" stroke="#762a83"/></g>
+<g><ellipse fill="#e7d4e8" cx="350" cy="50" rx="8" ry="8" stroke="#762a83"/></g>
+<g><ellipse fill="#e7d4e8" cx="350" cy="175" rx="8" ry="8" stroke="#762a83"/></g>
+<g><ellipse fill="#e7d4e8" cx="350" cy="300" rx="8" ry="8" stroke="#762a83"/></g>
+<g><ellipse fill="#e7d4e8" cx="350" cy="425" rx="8" ry="8" stroke="#762a83"/></g>
+
+<!-- node labels -->
+<text x="20" y="14" font-family="Verdana" font-size="16" stroke="#212121">Workers</text>
+<text x="310" y="14" font-family="Verdana" font-size="16" stroke="#212121">Tasks</text>
+<text x="46" y="54" font-family="Verdana" font-size="12" stroke="#212121">0</text>
+<text x="46" y="179" font-family="Verdana" font-size="12" stroke="#212121">1</text>
+<text x="46" y="304" font-family="Verdana" font-size="12" stroke="#212121">2</text>
+<text x="46" y="429" font-family="Verdana" font-size="12" stroke="#212121">3</text>
+<text x="346" y="54" font-family="Verdana" font-size="12" stroke="#212121">0</text>
+<text x="346" y="179" font-family="Verdana" font-size="12" stroke="#212121">1</text>
+<text x="346" y="304" font-family="Verdana" font-size="12" stroke="#212121">2</text>
+<text x="346" y="429" font-family="Verdana" font-size="12" stroke="#212121">3</text>
+
+<!-- edge labels -->
+<text x="76" y="115" font-family="Verdana" font-size="12" stroke="#212121">70</text>
+<text x="120" y="200" font-family="Verdana" font-size="12" stroke="#212121">55</text>
+<text x="110" y="266" font-family="Verdana" font-size="12" stroke="#212121">95</text>
+<text x="76" y="369" font-family="Verdana" font-size="12" stroke="#212121">45</text>
+</svg>

@@ -1,7 +1,7 @@
 {
-  "name": "assignRectangular2D",
+  "name": "linearSumAssignment",
   "version": "0.0.0",
-  "description": "",
+  "description": "it performs a linear sum assignment even if the cost matrix is rectangular.",
   "main": "./lib/index.js",
   "module": "./lib-esm/index.js",
   "types": "./lib/index.d.ts",
