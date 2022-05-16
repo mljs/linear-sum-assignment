@@ -15,6 +15,7 @@
   ],
   "scripts": {
     "clean": "rimraf lib lib-esm",
+    "check-types": "tsc --noEmit",
     "eslint": "eslint src --ext ts --cache",
     "eslint-fix": "npm run eslint -- --fix",
     "prepublishOnly": "npm run tsc",
