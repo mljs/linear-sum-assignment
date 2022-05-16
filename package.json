@@ -1,5 +1,5 @@
 {
-  "name": "linearSumAssignment",
+  "name": "linear-sum-assignment",
   "version": "1.0.0",
   "description": "it performs a linear sum assignment even if the cost matrix is rectangular.",
   "main": "./lib/index.js",
