@@ -11,7 +11,9 @@ describe('linear sum problem', () => {
     const diff = a.map((aElement) => {
       return b.map((bElement) => Math.abs(bElement - aElement));
     });
-    const { columnAssignments, rowAssignments } = linearSumAssignment(diff, { maximaze: false});
+    const { columnAssignments, rowAssignments } = linearSumAssignment(diff, {
+      maximaze: false,
+    });
     expect(columnAssignments).toMatchCloseTo([2, 0, 1, 3, 4]);
     expect(rowAssignments).toMatchCloseTo([1, 2, 0, 3, 4]);
   });
@@ -22,7 +24,9 @@ describe('linear sum problem', () => {
     const diff = a.map((aElement) => {
       return b.map((bElement) => Math.abs(bElement - aElement));
     });
-    const { columnAssignments, rowAssignments } = linearSumAssignment(diff, { maximaze: false});
+    const { columnAssignments, rowAssignments } = linearSumAssignment(diff, {
+      maximaze: false,
+    });
     expect(columnAssignments).toMatchCloseTo([2, 0, 1, 3, 4]);
     expect(rowAssignments).toMatchCloseTo([1, 2, 0, 3, 4, -1]);
   });
@@ -32,7 +36,9 @@ describe('linear sum problem', () => {
     const diff = a.map((aElement) => {
       return b.map((bElement) => Math.abs(bElement - aElement));
     });
-    const { columnAssignments, rowAssignments } = linearSumAssignment(diff, { maximaze: false});
+    const { columnAssignments, rowAssignments } = linearSumAssignment(diff, {
+      maximaze: false,
+    });
     expect(columnAssignments).toMatchCloseTo([1, 2, 0, 3, 4, -1]);
     expect(rowAssignments).toMatchCloseTo([2, 0, 1, 3, 4]);
   });
