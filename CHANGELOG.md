@@ -1,5 +1,12 @@
 # Changelog
 
+### [1.0.1](https://github.com/jobo322/linearSumAssignment/compare/v1.0.0...v1.0.1) (2022-05-16)
+
+
+### Bug Fixes
+
+* not upper case in package name ([dfb3bad](https://github.com/jobo322/linearSumAssignment/commit/dfb3bad83fd9d84a468cabd44a206cb939ad1fc3))
+
 ## 1.0.0 (2022-05-16)
 
 
