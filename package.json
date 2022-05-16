@@ -30,12 +30,12 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/jobo322/assignRectangular2D.git"
+    "url": "git+https://github.com/jobo322/linear-sum-assignment.git"
   },
   "bugs": {
-    "url": "https://github.com/jobo322/assignRectangular2D/issues"
+    "url": "https://github.com/jobo322/linear-sum-assignment/issues"
   },
-  "homepage": "https://github.com/jobo322/assignRectangular2D#readme",
+  "homepage": "https://github.com/jobo322/linear-sum-assignment#readme",
   "jest": {
     "preset": "ts-jest",
     "testEnvironment": "node"
