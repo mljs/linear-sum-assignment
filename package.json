@@ -6,7 +6,7 @@
   "module": "./lib-esm/index.js",
   "types": "./lib/index.d.ts",
   "keywords": [],
-  "author": "J Alejandro Bolanos A &lt;jobo322&gt;",
+  "author": "J Alejandro Bolanos A <jobo322>",
   "license": "MIT",
   "files": [
     "src",
