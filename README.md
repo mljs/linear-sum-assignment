@@ -13,10 +13,15 @@ augmenting path algorithm based on the publication [On implementing 2D rectangul
 
 If the number of rows is <= the number of columns, then every row is assigned to one column; otherwise every column is assigned to one row. The assignment minimizes the sum of the assigned elements.
 
+## Instalation
+
+`$ npm i linear-sum-assignment`
+
+
 ## Usage
 
 ```js
-import linearSumAssignment from 'linearSumAssignment';
+import linearSumAssignment from 'linear-sum-assignment';
 
 /**
  * there is one more value in the experimental values, so one of
