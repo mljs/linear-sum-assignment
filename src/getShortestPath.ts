@@ -3,12 +3,12 @@ import sequentialFill from 'ml-array-sequential-fill';
 import type { Matrix } from 'ml-matrix';
 
 interface GetShortestPathOptions {
-  currUnAssCol: number,
-  dualVariableForColumns: DoubleArray,
-  dualVariableForRows: DoubleArray,
-  rowAssignments: DoubleArray,
-  columnAssignments: DoubleArray,
-  matrix: Matrix,
+  currUnAssCol: number;
+  dualVariableForColumns: DoubleArray;
+  dualVariableForRows: DoubleArray;
+  rowAssignments: DoubleArray;
+  columnAssignments: DoubleArray;
+  matrix: Matrix;
 }
 
 export function getShortestPath(options: GetShortestPathOptions) {
@@ -21,7 +21,7 @@ export function getShortestPath(options: GetShortestPathOptions) {
     matrix,
   } = options;
 
-  let nbRows = matrix.rows
+  let nbRows = matrix.rows;
   let nbColumns = matrix.columns;
 
   let pred = new Float64Array(nbColumns);
@@ -43,10 +43,14 @@ export function getShortestPath(options: GetShortestPathOptions) {
     for (let curRowScan = 0; curRowScan < numRows2Scan; curRowScan++) {
       let curRow = rows2Scan[curRowScan];
 
-      let reducedCost = delta + matrix.get(curRow, curColumn) - dualVariableForColumns[curColumn] - dualVariableForRows[curRow];
+      let reducedCost =
+        delta +
+        matrix.get(curRow, curColumn) -
+        dualVariableForColumns[curColumn] -
+        dualVariableForRows[curRow];
       if (reducedCost < shortestPathCost[curRow]) {
         pred[curRow] = curColumn;
-        shortestPathCost[curRow] = reducedCost
+        shortestPathCost[curRow] = reducedCost;
       }
 
       if (shortestPathCost[curRow] < minVal) {
@@ -74,16 +78,20 @@ export function getShortestPath(options: GetShortestPathOptions) {
   for (let sel = 0; sel < nbColumns; sel++) {
     if (scannedColumns[sel] === 0) continue;
     if (sel === currUnAssCol) continue;
-    dualVariableForColumns[sel] += delta - shortestPathCost[columnAssignments[sel]];
+    dualVariableForColumns[sel] +=
+      delta - shortestPathCost[columnAssignments[sel]];
   }
   for (let sel = 0; sel < nbRows; sel++) {
     if (scannedRows[sel] === 0) continue;
-    dualVariableForRows[sel] -= (delta - shortestPathCost[sel]);
+    dualVariableForRows[sel] -= delta - shortestPathCost[sel];
   }
 
   return {
-    sink, pred, dualVariableForColumns, dualVariableForRows
-  }
+    sink,
+    pred,
+    dualVariableForColumns,
+    dualVariableForRows,
+  };
 }
 
 function getArrayOfInfinity(nbElements = 1, value = Number.POSITIVE_INFINITY) {

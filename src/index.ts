@@ -4,10 +4,13 @@ import { Matrix } from 'ml-matrix';
 import { getShortestPath } from './getShortestPath';
 
 interface Options {
-  maximaze?: boolean
+  maximaze?: boolean;
 }
 
-export default function linearSumAssignment(input: DoubleArray[], options: Options = {}) {
+export default function linearSumAssignment(
+  input: DoubleArray[],
+  options: Options = {},
+) {
   const { maximaze = true } = options;
 
   let matrix = Matrix.checkMatrix(input);
@@ -24,7 +27,6 @@ export default function linearSumAssignment(input: DoubleArray[], options: Optio
   let matrixDelta = maximaze ? matrix.max() : matrix.min();
   matrix = matrix.subtract(matrixDelta);
   if (maximaze) matrix = matrix.mul(-1);
-
 
   let rowAssignments: DoubleArray = new Float64Array(nbRows).fill(-1);
   let columnAssignments: DoubleArray = new Float64Array(nbColumns).fill(-1);
@@ -48,7 +50,7 @@ export default function linearSumAssignment(input: DoubleArray[], options: Optio
         rowAssignments: [],
         columnAssignments: [],
         gain: -1,
-      }
+      };
     }
 
     dualVariableForColumns = currentAugmenting.dualVariableForColumns;
@@ -69,11 +71,14 @@ export default function linearSumAssignment(input: DoubleArray[], options: Optio
     gain += matrix.get(columnAssignments[curCol], curCol);
   }
 
-  gain = ((maximaze ? -1 : 1) * gain) + (matrixDelta * nbColumns);
+  gain = (maximaze ? -1 : 1) * gain + matrixDelta * nbColumns;
 
   if (didFlip) {
     [columnAssignments, rowAssignments] = [rowAssignments, columnAssignments];
-    [dualVariableForColumns, dualVariableForRows] = [dualVariableForRows, dualVariableForColumns];
+    [dualVariableForColumns, dualVariableForRows] = [
+      dualVariableForRows,
+      dualVariableForColumns,
+    ];
   }
 
   return {
@@ -81,6 +86,6 @@ export default function linearSumAssignment(input: DoubleArray[], options: Optio
     columnAssignments,
     gain,
     dualVariableForColumns,
-    dualVariableForRows
-  }
+    dualVariableForRows,
+  };
 }
