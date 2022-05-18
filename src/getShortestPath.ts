@@ -24,7 +24,7 @@ export function getShortestPath(options: GetShortestPathOptions) {
   let nbRows = matrix.rows;
   let nbColumns = matrix.columns;
 
-  let pred = new Float64Array(nbColumns);
+  let pred = new Float64Array(nbRows);
   let scannedColumns = new Float64Array(nbColumns);
   let scannedRows = new Float64Array(nbRows);
 

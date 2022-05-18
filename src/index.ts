@@ -14,9 +14,8 @@ export default function linearSumAssignment(
   const { maximaze = true } = options;
 
   let matrix = Matrix.checkMatrix(input);
-
   let didFlip = false;
-  if (matrix.columns < matrix.rows) {
+  if (matrix.columns > matrix.rows) {
     didFlip = true;
     matrix = matrix.transpose();
   }
