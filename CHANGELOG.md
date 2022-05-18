@@ -1,5 +1,13 @@
 # Changelog
 
+### [1.0.3](https://github.com/jobo322/linear-sum-assignment/compare/v1.0.2...v1.0.3) (2022-05-18)
+
+
+### Bug Fixes
+
+* ensure nbRows <= nbColumns ([3df0e84](https://github.com/jobo322/linear-sum-assignment/commit/3df0e8494d73dfbe90fec2c9ed60629e4fdbe923))
+* wrong pred array size ([0e40eb1](https://github.com/jobo322/linear-sum-assignment/commit/0e40eb158d96910d3619389baed190068766a3a3))
+
 ### [1.0.2](https://github.com/jobo322/linearSumAssignment/compare/v1.0.1...v1.0.2) (2022-05-16)
 
 
