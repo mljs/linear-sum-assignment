@@ -8,7 +8,7 @@ interface Options {
 }
 
 export default function linearSumAssignment(
-  input: DoubleArray[],
+  input: DoubleArray[] | Matrix,
   options: Options = {},
 ) {
   const { maximaze = true } = options;
@@ -16,7 +16,7 @@ export default function linearSumAssignment(
   let matrix = Matrix.checkMatrix(input);
 
   let didFlip = false;
-  if (matrix.columns > matrix.rows) {
+  if (matrix.columns < matrix.rows) {
     didFlip = true;
     matrix = matrix.transpose();
   }
@@ -42,20 +42,20 @@ export default function linearSumAssignment(
       rowAssignments,
       columnAssignments,
     });
-
     let { sink, pred } = currentAugmenting;
 
     if (sink === -1) {
       return {
-        rowAssignments: [],
-        columnAssignments: [],
+        rowAssignments,
+        columnAssignments,
         gain: -1,
+        dualVariableForColumns,
+        dualVariableForRows,
       };
     }
 
     dualVariableForColumns = currentAugmenting.dualVariableForColumns;
     dualVariableForRows = currentAugmenting.dualVariableForRows;
-
     let j = sink;
     for (let i = pred[j]; true; i = pred[j]) {
       rowAssignments[j] = i;

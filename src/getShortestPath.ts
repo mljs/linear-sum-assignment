@@ -35,7 +35,6 @@ export function getShortestPath(options: GetShortestPathOptions) {
   let delta = 0;
   let curColumn = currUnAssCol;
   let shortestPathCost = getArrayOfInfinity(nbRows);
-
   while (sink === -1) {
     scannedColumns[curColumn] = 1;
     let minVal = Number.POSITIVE_INFINITY;

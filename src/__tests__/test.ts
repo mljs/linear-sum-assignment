@@ -27,8 +27,8 @@ describe('linear sum problem', () => {
     const { columnAssignments, rowAssignments } = linearSumAssignment(diff, {
       maximaze: false,
     });
-    expect(columnAssignments).toMatchCloseTo([2, 0, 1, 3, 4]);
-    expect(rowAssignments).toMatchCloseTo([1, 2, 0, 3, 4, -1]);
+    expect(columnAssignments).toMatchCloseTo([1, 2, 0, 3, 4, -1]);
+    expect(rowAssignments).toMatchCloseTo([2, 0, 1, 3, 4]);
   });
   it('differents size: rows < columns', () => {
     const a = [3.1, 1.1, 1.9, 3.99, 5.2];
@@ -41,5 +41,17 @@ describe('linear sum problem', () => {
     });
     expect(columnAssignments).toMatchCloseTo([1, 2, 0, 3, 4, -1]);
     expect(rowAssignments).toMatchCloseTo([2, 0, 1, 3, 4]);
+  });
+  it('before failing case', () => {
+    const diff = [
+      [0.10000000000000009, 0.5, 0.6000000000000001, 1.1],
+      [0.3999999999999999, 0, 0.10000000000000009, 0.6000000000000001],
+      [0.8999999999999999, 0.5, 0.3999999999999999, 0.10000000000000009],
+    ];
+    const { columnAssignments, rowAssignments } = linearSumAssignment(diff, {
+      maximaze: false,
+    });
+    expect(columnAssignments).toMatchCloseTo([0, 1, 2, -1]);
+    expect(rowAssignments).toMatchCloseTo([0, 1, 2]);
   });
 });
