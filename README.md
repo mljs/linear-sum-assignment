@@ -27,16 +27,16 @@ import linearSumAssignment from 'linear-sum-assignment';
  * there is one more value in the experimental values, so one of
  * them will be not assigned.
  **/
-const xValueExperimental = [1, 2, 3, 4, 5, 7];
-const xValuePredicted = [3.1, 1.1, 1.9, 3.99, 5.2];
+const experimental = [1, 2, 3, 4, 5, 7];
+const predicted = [3.1, 1.1, 1.9, 3.99, 5.2];
 
 /**
- * We will compute a cost matrix where xValueExperimental are
- * rows and xValuePredicted in columns.
+ * We will compute a cost matrix where experimental are
+ * rows and predicted in columns.
  * In this case we will look for the closest peak for each experimental peak value.
  **/
-const diff = xValueExperimental.map((experimental) => {
-  return xValuePredicted.map((predicted) => {
+const diff = experimental.map((experimental) => {
+  return predicted.map((predicted) => {
     return Math.abs(predicted - experimental);
   });
 });
@@ -60,11 +60,11 @@ console.log(result);
 */ 
 ```
 
- `rowAssignments` contains the index of the column assigned to each element in the rows (xValueExperimental). So the first element in xValueExperimental array is assigned to the second element of xValuePredicted.
+ `rowAssignments` contains the index of the column assigned to each element in the rows (experimental). So the first element in experimental array is assigned to the second element of predicted.
  `columnAssignments` contains the index of the row assigned to
  each element in the columns. So the first element in
- xValuePredicted is assigned to third element in
- xValueExperimental.
+ predicted is assigned to third element in
+ experimental.
  `dualVariableForColumns` and `dualVariableForRows` are the Lagrange multipliers or dual variables.
  `gain` the sum of the elements in the cost matrix.
 ## License
