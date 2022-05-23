@@ -1,5 +1,5 @@
 import { DoubleArray } from 'cheminfo-types';
-import sequentialFill from 'ml-array-sequential-fill';
+import { xSequentialFill } from 'ml-spectra-processing';
 import type { Matrix } from 'ml-matrix';
 
 interface GetShortestPathOptions {
@@ -28,7 +28,7 @@ export function getShortestPath(options: GetShortestPathOptions) {
   let scannedColumns = new Float64Array(nbColumns);
   let scannedRows = new Float64Array(nbRows);
 
-  let rows2Scan = sequentialFill({ from: 0, to: nbRows - 1, size: nbRows });
+  let rows2Scan = Array.from(xSequentialFill({ from: 0, to: nbRows - 1 }));
   let numRows2Scan = nbRows;
 
   let sink = -1;

@@ -50,8 +50,8 @@
   "dependencies": {
     "cheminfo-types": "^1.1.0",
     "install": "^0.13.0",
-    "ml-array-sequential-fill": "^1.1.8",
-    "ml-matrix": "^6.10.0"
+    "ml-matrix": "^6.10.0",
+    "ml-spectra-processing": "^11.6.0"
   },
   "devDependencies": {
     "@types/jest": "^27.5.0",
