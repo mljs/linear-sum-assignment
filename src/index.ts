@@ -7,7 +7,7 @@ interface Options {
   maximaze?: boolean;
 }
 
-export default function linearSumAssignment(
+export function linearSumAssignment(
   input: DoubleArray[] | Matrix,
   options: Options = {},
 ) {
