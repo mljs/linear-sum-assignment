@@ -4,10 +4,22 @@ import { Matrix } from 'ml-matrix';
 import { getShortestPath } from './getShortestPath';
 
 interface Options {
+  /**
+   * if true it will generate the assignment by the maximization of the cost.
+   * @default true
+   */
   maximaze?: boolean;
 }
 
+/**
+ * Implementation of Jonker-Volgenant shortest augmenting path algorithm based 
+ * on the publication [On implementing 2D rectangular assignment algorithms](https://doi.org/10.1109/TAES.2016.140952)
+ */
+
 export function linearSumAssignment(
+  /**
+   * Cost matrix
+   */
   input: DoubleArray[] | Matrix,
   options: Options = {},
 ) {
