@@ -1,6 +1,6 @@
 import { toMatchCloseTo } from 'jest-matcher-deep-close-to';
 
-import linearSumAssignment from '..';
+import { linearSumAssignment } from '..';
 
 expect.extend({ toMatchCloseTo });
 

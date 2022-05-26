@@ -1,6 +1,6 @@
 import { DoubleArray } from 'cheminfo-types';
-import sequentialFill from 'ml-array-sequential-fill';
 import type { Matrix } from 'ml-matrix';
+import { xSequentialFill } from 'ml-spectra-processing';
 
 interface GetShortestPathOptions {
   currUnAssCol: number;
@@ -28,13 +28,13 @@ export function getShortestPath(options: GetShortestPathOptions) {
   let scannedColumns = new Float64Array(nbColumns);
   let scannedRows = new Float64Array(nbRows);
 
-  let rows2Scan = sequentialFill({ from: 0, to: nbRows - 1, size: nbRows });
+  let rows2Scan = Array.from(xSequentialFill({ from: 0, to: nbRows - 1 }));
   let numRows2Scan = nbRows;
 
   let sink = -1;
   let delta = 0;
   let curColumn = currUnAssCol;
-  let shortestPathCost = getArrayOfInfinity(nbRows);
+  let shortestPathCost = new Array(nbRows).fill(Number.POSITIVE_INFINITY);
   while (sink === -1) {
     scannedColumns[curColumn] = 1;
     let minVal = Number.POSITIVE_INFINITY;
@@ -91,12 +91,4 @@ export function getShortestPath(options: GetShortestPathOptions) {
     dualVariableForColumns,
     dualVariableForRows,
   };
-}
-
-function getArrayOfInfinity(nbElements = 1, value = Number.POSITIVE_INFINITY) {
-  const array = new Array(nbElements);
-  for (let i = 0; i < nbElements; i++) {
-    array[i] = value;
-  }
-  return array;
 }
