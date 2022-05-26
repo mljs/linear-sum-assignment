@@ -1,5 +1,12 @@
 # Changelog
 
+### [1.0.4](https://github.com/jobo322/linear-sum-assignment/compare/v1.0.3...v1.0.4) (2022-05-26)
+
+
+### Bug Fixes
+
+* use updated dependencies ([#19](https://github.com/jobo322/linear-sum-assignment/issues/19)) ([508cde5](https://github.com/jobo322/linear-sum-assignment/commit/508cde5898fcfd03941f6b464554e6881d5cc35b))
+
 ### [1.0.3](https://github.com/jobo322/linear-sum-assignment/compare/v1.0.2...v1.0.3) (2022-05-18)
 
 
