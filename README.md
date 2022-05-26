@@ -7,7 +7,6 @@
   <img alt="NMReDATA" src="images/linear_assignment.svg">
 </p>
 
-
 This package is the implementation of Jonker-Volgenant shortest
 augmenting path algorithm based on the publication [On implementing 2D rectangular assignment algorithms](https://doi.org/10.1109/TAES.2016.140952)
 
@@ -17,11 +16,11 @@ If the number of rows is <= the number of columns, then every row is assigned to
 
 `$ npm i linear-sum-assignment`
 
-
 ## Usage
 
 ```js
 import linearSumAssignment from 'linear-sum-assignment';
+import { xCostMatrix } from 'ml-spectra-processing';
 
 /**
  * there is one more value in the experimental values, so one of
@@ -35,12 +34,10 @@ const predicted = [3.1, 1.1, 1.9, 3.99, 5.2];
  * rows and predicted in columns.
  * In this case we will look for the closest peak for each experimental peak value.
  **/
-const diff = experimental.map((experimental) => {
-  return predicted.map((predicted) => {
-    return Math.abs(predicted - experimental);
-  });
-});
 
+const diff = xCostMatrix(experimental, predicted, {
+  fct: (a, b) => Math.abs(a - b),
+});
 const result = linearSumAssignment(diff, { maximaze: false });
 console.log(result);
 /**
@@ -57,16 +54,15 @@ console.log(result);
   ],
   dualVariableForRows: Float64Array(6) [ 0, 0, 0, 0, 0, 0 ]
 }
-*/ 
+*/
 ```
 
- `rowAssignments` contains the index of the column assigned to each element in the rows (experimental). So the first element in experimental array is assigned to the second element of predicted.
- `columnAssignments` contains the index of the row assigned to
- each element in the columns. So the first element in
- predicted is assigned to third element in
- experimental.
- `dualVariableForColumns` and `dualVariableForRows` are the Lagrange multipliers or dual variables.
- `gain` the sum of the elements in the cost matrix.
+`rowAssignments` contains the index of the column assigned to each element in the rows (experimental).
+
+`columnAssignments` contains the index of the row assigned to each element in the columns. So the first element in predicted is assigned to third element in experimental.
+`dualVariableForColumns` and `dualVariableForRows` are the Lagrange multipliers or dual variables.
+`gain` the sum of the elements in the cost matrix.
+
 ## License
 
 [MIT](./LICENSE)

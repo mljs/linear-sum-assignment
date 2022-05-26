@@ -1,6 +1,6 @@
 import { DoubleArray } from 'cheminfo-types';
-import { xSequentialFill } from 'ml-spectra-processing';
 import type { Matrix } from 'ml-matrix';
+import { xSequentialFill } from 'ml-spectra-processing';
 
 interface GetShortestPathOptions {
   currUnAssCol: number;
