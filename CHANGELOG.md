@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.0.5](https://github.com/mljs/linear-sum-assignment/compare/v1.0.4...v1.0.5) (2023-03-24)
+
+
+### Bug Fixes
+
+* update dependencies and remove package-lock ([95b5b4d](https://github.com/mljs/linear-sum-assignment/commit/95b5b4d9aac9d6eb87f7680b458fcc38b1112c01))
+
 ### [1.0.4](https://github.com/jobo322/linear-sum-assignment/compare/v1.0.3...v1.0.4) (2022-05-26)
 
 
