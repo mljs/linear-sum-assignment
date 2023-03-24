@@ -1,6 +1,6 @@
 {
   "name": "linear-sum-assignment",
-  "version": "1.0.4",
+  "version": "1.0.5",
   "description": "it performs a linear sum assignment even if the cost matrix is rectangular.",
   "main": "./lib/index.js",
   "module": "./lib-esm/index.js",
