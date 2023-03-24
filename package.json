@@ -48,20 +48,20 @@
     "trailingComma": "all"
   },
   "dependencies": {
-    "cheminfo-types": "^1.1.0",
+    "cheminfo-types": "^1.4.0",
     "install": "^0.13.0",
-    "ml-matrix": "^6.10.0",
-    "ml-spectra-processing": "^11.6.0"
+    "ml-matrix": "^6.10.4",
+    "ml-spectra-processing": "^12.0.0"
   },
   "devDependencies": {
-    "@types/jest": "^27.5.0",
-    "eslint": "^8.15.0",
-    "eslint-config-cheminfo-typescript": "^10.4.0",
-    "jest": "^28.1.0",
+    "@types/jest": "^29.5.0",
+    "eslint": "^8.36.0",
+    "eslint-config-cheminfo-typescript": "^11.3.1",
+    "jest": "^29.5.0",
     "jest-matcher-deep-close-to": "^3.0.2",
-    "prettier": "^2.6.2",
-    "rimraf": "^3.0.2",
-    "ts-jest": "^28.0.1",
-    "typescript": "^4.6.4"
+    "prettier": "^2.8.7",
+    "rimraf": "^4.4.1",
+    "ts-jest": "^29.0.5",
+    "typescript": "^5.0.2"
   }
 }
