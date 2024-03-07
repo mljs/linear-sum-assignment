@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.0.6](https://github.com/mljs/linear-sum-assignment/compare/v1.0.5...v1.0.6) (2024-03-07)
+
+
+### Bug Fixes
+
+* update dependencies ([62dae97](https://github.com/mljs/linear-sum-assignment/commit/62dae97c55bc763df5f1759273af44c8ef1aa8a7))
+
 ## [1.0.5](https://github.com/mljs/linear-sum-assignment/compare/v1.0.4...v1.0.5) (2023-03-24)
 
 
