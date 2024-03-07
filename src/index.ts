@@ -32,10 +32,10 @@ export function linearSumAssignment(
     matrix = matrix.transpose();
   }
 
-  let nbRows = matrix.rows;
-  let nbColumns = matrix.columns;
+  const nbRows = matrix.rows;
+  const nbColumns = matrix.columns;
 
-  let matrixDelta = maximaze ? matrix.max() : matrix.min();
+  const matrixDelta = maximaze ? matrix.max() : matrix.min();
   matrix = matrix.subtract(matrixDelta);
   if (maximaze) matrix = matrix.mul(-1);
 
@@ -45,7 +45,7 @@ export function linearSumAssignment(
   let dualVariableForRows: DoubleArray = new Float64Array(nbRows);
 
   for (let currUnAssCol = 0; currUnAssCol < nbColumns; currUnAssCol++) {
-    let currentAugmenting = getShortestPath({
+    const currentAugmenting = getShortestPath({
       matrix,
       currUnAssCol,
       dualVariableForColumns,
@@ -53,7 +53,7 @@ export function linearSumAssignment(
       rowAssignments,
       columnAssignments,
     });
-    let { sink, pred } = currentAugmenting;
+    const { sink, pred } = currentAugmenting;
 
     if (sink === -1) {
       return {
@@ -70,7 +70,7 @@ export function linearSumAssignment(
     let j = sink;
     for (let i = pred[j]; true; i = pred[j]) {
       rowAssignments[j] = i;
-      let h = columnAssignments[i];
+      const h = columnAssignments[i];
       columnAssignments[i] = j;
       j = h;
       if (i === currUnAssCol) break;
