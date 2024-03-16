@@ -69,9 +69,9 @@ console.log(result);
 
 [npm-image]: https://img.shields.io/npm/v/linearSumAssignment.svg
 [npm-url]: https://www.npmjs.com/package/linearSumAssignment
-[ci-image]: https://github.com/jobo322/linearSumAssignment/workflows/Node.js%20CI/badge.svg?branch=main
-[ci-url]: https://github.com/jobo322/linearSumAssignment/actions?query=workflow%3A%22Node.js+CI%22
-[codecov-image]: https://img.shields.io/codecov/c/github/jobo322/linearSumAssignment.svg
-[codecov-url]: https://codecov.io/gh/jobo322/linearSumAssignment
+[ci-image]: https://github.com/mljs/linear-sum-assignment/workflows/Node.js%20CI/badge.svg?branch=main
+[ci-url]: https://github.com/mljs/linear-sum-assignment/actions?query=workflow%3A%22Node.js+CI%22
+[codecov-image]: https://img.shields.io/codecov/c/github/mljs/linear-sum-assignment.svg
+[codecov-url]: https://codecov.io/gh/mljs/linear-sum-assignment
 [download-image]: https://img.shields.io/npm/dm/linearSumAssignment.svg
 [download-url]: https://www.npmjs.com/package/linearSumAssignment

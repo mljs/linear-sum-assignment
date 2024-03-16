@@ -30,12 +30,12 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/jobo322/linear-sum-assignment.git"
+    "url": "git+https://github.com/mljs/linear-sum-assignment.git"
   },
   "bugs": {
-    "url": "https://github.com/jobo322/linear-sum-assignment/issues"
+    "url": "https://github.com/mljs/linear-sum-assignment/issues"
   },
-  "homepage": "https://github.com/jobo322/linear-sum-assignment#readme",
+  "homepage": "https://github.com/mljs/linear-sum-assignment#readme",
   "jest": {
     "preset": "ts-jest",
     "testEnvironment": "node"
