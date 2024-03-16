@@ -24,7 +24,7 @@
     "test": "npm run test-coverage && npm run eslint",
     "test-coverage": "npm run test-only -- --coverage",
     "test-only": "jest",
-    "tsc": "npm run clean && npm run tsc-cjs && npm run tsc-esm && npm run tsc-types",
+    "tsc": "npm run clean && npm run tsc-cjs && npm run tsc-esm",
     "tsc-cjs": "tsc --project tsconfig.cjs.json",
     "tsc-esm": "tsc --project tsconfig.esm.json"
   },
@@ -48,10 +48,10 @@
     "trailingComma": "all"
   },
   "dependencies": {
-    "cheminfo-types": "^1.7.2",
+    "cheminfo-types": "^1.7.3",
     "install": "^0.13.0",
     "ml-matrix": "^6.11.0",
-    "ml-spectra-processing": "^14.2.1"
+    "ml-spectra-processing": "^14.2.2"
   },
   "devDependencies": {
     "@types/jest": "^29.5.12",
