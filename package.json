@@ -49,7 +49,6 @@
   },
   "dependencies": {
     "cheminfo-types": "^1.7.3",
-    "install": "^0.13.0",
     "ml-matrix": "^6.11.0",
     "ml-spectra-processing": "^14.2.2"
   },
