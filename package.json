@@ -1,6 +1,6 @@
 {
   "name": "linear-sum-assignment",
-  "version": "1.0.8",
+  "version": "1.0.9",
   "license": "MIT",
   "description": "it performs a linear sum assignment even if the cost matrix is rectangular.",
   "keywords": [],
