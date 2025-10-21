@@ -1,8 +1,6 @@
-import { toMatchCloseTo } from 'jest-matcher-deep-close-to';
+import { describe, expect, it } from 'vitest';
 
-import { linearSumAssignment } from '..';
-
-expect.extend({ toMatchCloseTo });
+import { linearSumAssignment } from '../index.ts';
 
 describe('linear sum problem', () => {
   it('same number of rows and columns', () => {
