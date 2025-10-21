@@ -1,8 +1,8 @@
-import { DoubleArray } from 'cheminfo-types';
+import type { DoubleArray } from 'cheminfo-types';
 import type { Matrix } from 'ml-matrix';
 import { xSequentialFillFromTo } from 'ml-spectra-processing';
 
-interface GetShortestPathOptions {
+export interface GetShortestPathOptions {
   currUnAssCol: number;
   dualVariableForColumns: DoubleArray;
   dualVariableForRows: DoubleArray;

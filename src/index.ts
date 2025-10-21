@@ -1,9 +1,9 @@
-import { DoubleArray } from 'cheminfo-types';
+import type { DoubleArray } from 'cheminfo-types';
 import { Matrix } from 'ml-matrix';
 
-import { getShortestPath } from './getShortestPath';
+import { getShortestPath } from './getShortestPath.ts';
 
-interface Options {
+export interface LinearSumAssignmentOptions {
   /**
    * if true it will generate the assignment by the maximization of the cost.
    * @default true
@@ -21,7 +21,7 @@ export function linearSumAssignment(
    * Cost matrix
    */
   input: DoubleArray[] | Matrix,
-  options: Options = {},
+  options: LinearSumAssignmentOptions = {},
 ) {
   const { maximaze = true } = options;
 
